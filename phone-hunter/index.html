@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="text-center">
+        <h1 class="text-4xl font-bold mt-8">Phone Hunter</h1>
+        <p class="text-2xl font-semibold mt-4">See details of your desired Phone </p>
+        <p class="text-3xl font-bold mt-8 mb-4">Search your Phone</p>
+        <input id="search-phone" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        <button onclick="handleSearchPhone()" class="btn btn-primary">Primary</button>
+    </header>
+    <main>
+        <div id="phones-container" class="container mx-auto gap-4 my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        </div>
+        <div id="show-more-btn" class="mx-auto my-4 text-center hidden">
+            <button onclick="handleShowMore()" class="btn btn-primary">Show More</button>
+        </div>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_more" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <img id="img" alt="">
+            <h3 id="phone-name" class="text-lg font-bold text-center"></h3>
+            <p class="py-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p><span class="font-semibold">Storage: </span> <span id="storage"></span></p>
+            <p><span class="font-semibold">Display Size: </span> <span id="display-size"></span></p>
+            <p><span class="font-semibold">Memory: </span> <span id="memory"></span></p>
+            <p><span class="font-semibold">Released Data: </span> <span id="release-date"></span></p>
+            <div class="modal-action">
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
+    </main>
+    <script src="/js/index.js"></script>
+</body>
+</html>
