@@ -25,7 +25,7 @@
         <!-- Open the modal using ID.showModal() method -->
         <dialog id="show_more" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
-            <img id="img" alt="">
+            <img class="mx-auto my-2" id="img" alt="">
             <h3 id="phone-name" class="text-lg font-bold text-center"></h3>
             <p class="py-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             <p><span class="font-semibold">Storage: </span> <span id="storage"></span></p>
@@ -40,6 +40,10 @@
             </div>
         </div>
         </dialog>
+        <br>
+        <div id="loader" class="mx-auto my-8 text-center hidden">
+            <span  class="loading loading-dots loading-lg "></span>
+        </div>
     </main>
     <script src="/js/index.js"></script>
 </body>

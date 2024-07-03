@@ -1,4 +1,5 @@
 const handleSearchPhone = (isShowMore) =>{
+    document.getElementById('loader').classList.remove('hidden');
     const searchPhoneField = document.getElementById('search-phone');
     const searchPhoneText = searchPhoneField.value;
     loadData(searchPhoneText, isShowMore);
@@ -44,6 +45,7 @@ const displayData = (phones, isShowMore) =>{
         `
         phonesContainer.appendChild(div); 
     })
+    document.getElementById('loader').classList.add('hidden');
 }
 
 // show more
@@ -72,8 +74,7 @@ const displayShowDetails = data =>{
 
     const releaseDate = document.getElementById('release-date');
     releaseDate.innerText = data.mainFeatures.releaseDate;
-    
-    const img = document.getElementById(img);
-    img.setAttribute('src') = data.img
 
+    const img = document.getElementById('img');
+    img.setAttribute('src', data.image) ;
 }
